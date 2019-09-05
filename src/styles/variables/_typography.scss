@@ -1,0 +1,25 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:600,900&display=swap");
+
+@import url("https://fonts.googleapis.com/css?family=Ubuntu+Mono&display=swap");
+
+@import url("https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap");
+
+$font-family: "Poppins", sans-serif;
+$text-family: "Ubuntu Mono", sans-serif;
+$heading-family: "Press Start 2P", cursive;
+
+:root {
+    font-family: $text-family;
+    font-size: 22px;
+    color: $text-colour;
+}
+
+h1,
+h2,
+h3 {
+    color: $text-colour;
+
+    &-alt {
+        color: $alt-heading-colour;
+    }
+}

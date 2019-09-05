@@ -1,0 +1,15 @@
+body {
+    background-color: $background-colour;
+}
+
+img {
+    max-width: 100%;
+}
+
+section {
+    min-height: 90vh;
+
+    &.row {
+        align-items: center;
+    }
+}
