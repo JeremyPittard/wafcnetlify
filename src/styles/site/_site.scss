@@ -1,5 +1,6 @@
 body {
-    background-color: $background-colour;
+    margin: 0;
+    padding: 0;
 }
 
 img {
@@ -7,9 +8,69 @@ img {
 }
 
 section {
-    min-height: 90vh;
-
+    padding: 100px 0;
+    position: relative;
     &.row {
         align-items: center;
+    }
+}
+
+.blue-bg {
+    background-color: $background-colour;
+    background-image: linear-gradient(to right, $background-colour, $darker-blue);
+
+    color: $white;
+
+    .prev,
+    .next {
+        text-decoration: none;
+        svg {
+            transition: all 250ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+            path {
+                fill: $white;
+            }
+        }
+    }
+
+    ::selection {
+        background: $white;
+        color: $blue;
+    }
+}
+
+.white-bg {
+    background-color: $white;
+
+    color: $blue;
+
+    .prev,
+    .next {
+        text-decoration: none;
+        svg {
+            transition: all 250ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+            path {
+                fill: $blue;
+            }
+        }
+    }
+
+    ::selection {
+        background: $blue;
+        color: $white;
+    }
+}
+
+.small-logo {
+    height: 50px;
+}
+
+.prev,
+.next {
+    &:hover {
+        svg {
+            transform: scale(1.1);
+        }
     }
 }

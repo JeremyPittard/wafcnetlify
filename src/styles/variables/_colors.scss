@@ -1,6 +1,7 @@
-$background-colour: #1b0f12;
-$text-colour: #d3d3d3;
-$heading-colour: #ff00ff;
+$blue: #3e4189;
 
 $black: #000;
 $white: #fff;
+
+$background-colour: $blue;
+$darker-blue: darken($blue, 15%);

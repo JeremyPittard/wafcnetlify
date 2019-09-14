@@ -2,5 +2,14 @@
 @import "./variables/_typography.scss";
 //grid layout
 @import "./grid";
+@import "./slick";
 
 //add other scss files to be imported here
+@import "./site/site";
+@import "./site/home-news";
+@import "./site/home-about";
+@import "./site/home-events";
+@import "./site/home-sponsors";
+@import "./site/home-map";
+@import "./site/footer";
+@import "./site/navbar";

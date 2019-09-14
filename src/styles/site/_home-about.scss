@@ -1,0 +1,26 @@
+.home-about {
+    padding-bottom: 135px;
+    &__title {
+        color: $blue;
+        -webkit-text-fill-color: $white;
+        -webkit-text-stroke: 2px $blue;
+        margin: 0;
+        padding-left: 25px;
+        z-index: 1;
+        position: relative;
+    }
+
+    &__image-wrap {
+        margin-top: -40px;
+        max-width: 600px;
+        position: relative;
+        box-shadow: 35px 36px 0px 3px $blue;
+        background: transparent;
+    }
+
+    &__text {
+        display: flex;
+        justify-content: flex-end;
+        flex-direction: column;
+    }
+}

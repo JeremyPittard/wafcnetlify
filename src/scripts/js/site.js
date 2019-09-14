@@ -1,51 +1,27 @@
 //init functions
 $(document).ready(function() {
-    loadOut();
-    menuOpen();
-    scrolling();
-    animateScrolling();
+    initMap();
 });
 
 //functions start here
 
-function loadOut() {
-    setTimeout(function() {
-        $(".loading-screen").addClass("loaded");
-    }, 2000);
-    setTimeout(function() {
-        $(".loading-screen").hide();
-    }, 2500);
-}
-
-function menuOpen() {
-    $(".nav-bar__menu-icon").on("click", function() {
-        $(this).toggleClass("open");
-        $(".menu").toggleClass("open");
-        $(".nav-bar__logo").toggleClass("hidden");
+function initMap() {
+    console.log("initialising map");
+    // The location of wafc
+    var wafc = { lat: -31.80399, lng: 115.757 };
+    // The map, centered at wafc
+    var map = new google.maps.Map(document.getElementById("map"), {
+        zoom: 15,
+        center: wafc
     });
-}
 
-function scrolling() {
-    var header = $(".nav-bar__logo");
-    $(window).scroll(function() {
-        var scroll = $(window).scrollTop();
-
-        if (scroll >= 200) {
-            header.addClass("scrolled");
-        } else {
-            header.removeClass("scrolled");
-        }
+    // The marker, positioned at wafc
+    var marker = new google.maps.Marker({
+        draggable: false,
+        animation: google.maps.Animation.DROP,
+        position: wafc,
+        map: map,
+        icon: "https://www.whitfordafc.com.au/wp-content/themes/badfunkstripe/img/icons/logo.svg",
+        mapTypeControl: false
     });
-}
-
-function animateScrolling() {
-    var trigger = $(".trigger");
-    console.log("waypoint started");
-
-    trigger.waypoint(
-        function() {
-            $(this.element).addClass("triggered");
-        },
-        { offset: "60%" }
-    );
 }
